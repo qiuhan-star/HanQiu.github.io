@@ -13,18 +13,44 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://murphylee914.github.io/archives/2023/02/"/>
+    <link rel="canonical" href="https://murphylee914.github.io/2023/09/19/drlpp/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://murphylee914.github.io/archives/2023/02/index.html">
+        <meta name="description" content="false">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DRL-PP">
+<meta property="og:url" content="https://murphylee914.github.io/2023/09/19/DRLPP/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="false">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Grid_Method.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\ESC.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\CRL.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E1.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E2.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E31.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E32.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E33.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E34.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E35.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E4.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\E5.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Algo1.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Algo2.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\ADG.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Head-on.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Crossing.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Overtaking.png">
+<meta property="og:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\reward.png">
+<meta property="article:published_time" content="2023-09-19T09:09:16.000Z">
+<meta property="article:modified_time" content="2023-09-19T11:08:09.423Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="OR">
+<meta property="article:tag" content="DRL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:\BaiduNetdiskDownload\Note\Report\figures\Grid_Method.png">
     
     
     <!--- Icon Part-->
@@ -36,7 +62,7 @@
     
     <title>
         
-            Archive: 2023/2 -
+            DRL-PP -
         
         Murphy Lee
     </title>
@@ -85,7 +111,119 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -152,7 +290,7 @@
                         
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/archives"  >
                                     
                                         
@@ -388,7 +526,7 @@
             
                 
                     <li class="drawer-navbar-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/archives"  >
                              
                                 
@@ -574,71 +712,446 @@
             <div class="main-content">
 
                 
-                    <div class="archive-container ">
-    
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[8]</span>
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                
+                
+                <img src="https://img1.imgtp.com/2023/07/21/rHk4lJnE.png" alt="DRL-PP" />
+                
+                <h1 class="article-title-cover">DRL-PP</h1>
+            
             </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='09-19'>
-                <a href="/2023/09/19/DRLPP/">
-                  <span class="article-title">DRL-PP</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-18'>
-                <a href="/2023/07/18/Simulation/">
-                  <span class="article-title">Simulation</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-01'>
-                <a href="/2023/07/01/Java/">
-                  <span class="article-title">Java</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-01'>
-                <a href="/2023/07/01/Data%20Structure%20&%20Algorithm%20in%20Java/">
-                  <span class="article-title">Data Structure &amp; Algorithm</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='06-11'>
-                <a href="/2023/06/11/Operation%20Research/">
-                  <span class="article-title">Operation Research</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-22'>
-                <a href="/2023/05/22/Resume/">
-                  <span class="article-title">Personal Resume</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-21'>
-                <a href="/2023/05/21/HelloWorld/">
-                  <span class="article-title">Hello World</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='02-27'>
-                <a href="/2023/02/27/DRL/">
-                  <span class="article-title">DRL</span>
-                </a>
-              </li>
-              
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Murphy Lee</span>
+                        
+                            <span class="author-label">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-09-19 17:09:16</span>
+        <span class="mobile">2023-09-19 17:09:16</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-09-19 19:08:09</span>
+            <span class="mobile">2023-09-19 19:08:09</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Note/">Note</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/OR/">OR</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/DRL/">DRL</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Deep-reinforcement-learning-based-path-planning-and-collision-avoidance-for-smart-ships-in-complex-environments"><a href="#Deep-reinforcement-learning-based-path-planning-and-collision-avoidance-for-smart-ships-in-complex-environments" class="headerlink" title="Deep reinforcement learning based path planning and collision avoidance for smart ships in complex environments"></a>Deep reinforcement learning based path planning and collision avoidance for smart ships in complex environments</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><ul>
+<li>Intelligence in shipbuilding and shipping is a key trend enabling high-quality development in the post-pandemic era<ul>
+<li>Main components<ul>
+<li>Autonomous navigation</li>
+<li>Automatic collision avoidance</li>
+<li>Energy management systems</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Significance"><a href="#Significance" class="headerlink" title="Significance"></a>Significance</h3><ul>
+<li><p>Intelligent navigation is a core smart ship technology realized through advanced automation and navigation systems</p>
+<ul>
+<li><code>Safety</code>、<code>efficiency</code>、<code>cost</code> <ul>
+<li>optimizing ship speeds and routes</li>
+<li>ensuring navigational safety</li>
+<li>reducing fuel consumption and emissions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Traditional methods</p>
+<ul>
+<li>have limitations for path planning problems in random, complex environments which involve difficult-to-quantify factors like the navigation setting and contingent uncertainties</li>
+<li>Deep reinforcement learning demonstrates better performance with abstract, difficult-to-quantify influences compared to traditional approaches</li>
+</ul>
+</li>
+<li><p>Work basis</p>
+<blockquote>
+<p><em><em>Gao P, Zhou L, Zhao X</em>, Shao B, Research on ship collision avoidance path planning based on modified potential field ant colony algorithm [J]. Ocean and Coastal Management,2023,235(3): 106482. <a class="link" target="_blank" rel="noopener" href="https://doi.org/10.1016/j.ocecoaman.2023.106482">https://doi.org/10.1016/j.ocecoaman.2023.106482</a>.</em>*</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><h3 id="Ship-collision-avoidance-problem-description"><a href="#Ship-collision-avoidance-problem-description" class="headerlink" title="Ship collision avoidance problem description"></a>Ship collision avoidance problem description</h3><ul>
+<li>Ship<ul>
+<li>own ship</li>
+<li>target ship / mutli-ships</li>
+<li>obstacle (static、dynamic)</li>
+</ul>
+</li>
+<li>Collision avoidance<ul>
+<li>rules</li>
+<li>state</li>
+<li>action</li>
+</ul>
+</li>
+<li>Path planning<ul>
+<li>objective</li>
+<li>constraints</li>
+<li>method</li>
+<li>AIS data</li>
+<li>rules</li>
+</ul>
+</li>
+</ul>
+<h3 id="Ship-domain-modeling-based-on-AIS-and-rules"><a href="#Ship-domain-modeling-based-on-AIS-and-rules" class="headerlink" title="Ship domain modeling based on AIS and rules"></a>Ship domain modeling based on AIS and rules</h3><ul>
+<li><p>Grid Method</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Grid_Method.png" alt="Grid Method.png"></p>
+</li>
+<li><p>Encounter Situation Classification</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\ESC.png" alt="Untitled"></p>
+</li>
+<li><p>Level of ship collision risk</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\CRL.png" alt="CRL.png"></p>
+</li>
+</ul>
+<h2 id="Model-and-algorithm"><a href="#Model-and-algorithm" class="headerlink" title="Model and algorithm"></a>Model and algorithm</h2><h3 id="Markov-Decision-Process"><a href="#Markov-Decision-Process" class="headerlink" title="Markov Decision Process"></a>Markov Decision Process</h3><ul>
+<li><p>State Space</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E1.png" alt="CRL.png"></p>
+</li>
+<li><p>Action Space</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E2.png" alt="CRL.png"></p>
+</li>
+<li><p>Reward function</p>
+<ul>
+<li><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E31.png" alt="CRL.png"></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E32.png" alt="CRL.png"></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E33.png" alt="CRL.png"></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E34.png" alt="CRL.png"></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E35.png" alt="CRL.png"></li>
+</ul>
+</li>
+<li><p>Total_reward</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E4.png" alt="CRL.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>Return</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\E5.png" alt="CRL.png"></p>
+</li>
+</ul>
+<h3 id="D3QN-algorithm"><a href="#D3QN-algorithm" class="headerlink" title="D3QN algorithm"></a>D3QN algorithm</h3><ul>
+<li><p>Dueling Double DQN algorithm pseudocode</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Algo1.png" alt="CRL.png"></p>
+</li>
+<li><p>to</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Algo2.png" alt="CRL.png"></p>
+</li>
+<li><p>Adaptive decay greedy strategy</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\ADG.png" alt="CRL.png"></p>
+</li>
+</ul>
+<h2 id="Simulation-Experiment"><a href="#Simulation-Experiment" class="headerlink" title="Simulation Experiment"></a>Simulation Experiment</h2><h3 id="Parameter-setting"><a href="#Parameter-setting" class="headerlink" title="Parameter setting"></a>Parameter setting</h3><ul>
+<li>Ship information</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Vessel</th>
+<th>Name</th>
+<th>Type</th>
+<th>Size (m)</th>
+<th>Tonnage (t)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Own ship</td>
+<td>Hang Xing817</td>
+<td>Bulk cargo ship</td>
+<td>87-14.8-5.1</td>
+<td>2114</td>
+</tr>
+<tr>
+<td>Target ship</td>
+<td>Zhou Gong6006</td>
+<td>Bulk cargo ship</td>
+<td>67.8-16.0-5.2</td>
+<td>2138</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Hyperparameter</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Hyperparameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Episode</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>Learning rate</td>
+<td>1-e4</td>
+</tr>
+<tr>
+<td>Batch size</td>
+<td>256</td>
+</tr>
+<tr>
+<td>Target network update frequency</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>Replay buffer</td>
+<td>100000</td>
+</tr>
+<tr>
+<td>Skit ratio</td>
+<td>0. 02</td>
+</tr>
+<tr>
+<td>PER</td>
+<td>0. 6</td>
+</tr>
+<tr>
+<td>PER</td>
+<td>0. 4</td>
+</tr>
+<tr>
+<td>Warm start</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Discount factor</td>
+<td>0.99</td>
+</tr>
+</tbody></table>
+<h3 id="Collision-avoidance-experiments"><a href="#Collision-avoidance-experiments" class="headerlink" title="Collision avoidance experiments"></a>Collision avoidance experiments</h3><ul>
+<li><p>Head-on</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Head-on.png" alt="Head-on.png"></p>
+</li>
+<li><p>Crossing</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Crossing.png" alt="Crossing.png"></p>
+</li>
+<li><p>Overtaking</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\Overtaking.png" alt="Overtaking.png"></p>
+</li>
+<li><p>Reward</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="D:\BaiduNetdiskDownload\Note\Report\figures\reward.png" alt="reward.png"></p>
+</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>For ship collision avoidance path planning in dynamic environments, large state and complex action spaces arise due to uncertainties.</li>
+<li>Based on AIS data and COLREGs, this paper designs rewards evaluating multiple rule-compliant behaviors. An adaptive attenuated greedy exploration strategy is introduced based on the prioritized experience replay D3QN algorithm. Experiments under various collision avoidance scenarios demonstrate that the proposed method achieves superior results.</li>
+<li>Further considerations<ul>
+<li>Multi-OBJ</li>
+<li>Complexity：uncertainty、dynamic、multi-ships (communication)</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> DRL-PP</li>
+        <li><strong>Author:</strong> Murphy Lee</li>
+        <li><strong>Created at:</strong> 2023-09-19 17:09:16</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-09-19 19:08:09
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/09/19/DRLPP/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
 </div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/OR/">#OR</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/DRL/">#DRL</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/07/18/Simulation/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Simulation</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-swup-reload-script
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-swup-reload-script>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '17d3bab37dca20e86788',
+                    clientSecret: '6b006132812e76f564359a9534ee1f2f7fe7e5c5',
+                    repo: 'Gitalk',
+                    owner: 'MurphyLee914',
+                    admin: ['MurphyLee914'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">DRL-PP</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deep-reinforcement-learning-based-path-planning-and-collision-avoidance-for-smart-ships-in-complex-environments"><span class="nav-text">Deep reinforcement learning based path planning and collision avoidance for smart ships in complex environments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Significance"><span class="nav-text">Significance</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-Description"><span class="nav-text">Problem Description</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ship-collision-avoidance-problem-description"><span class="nav-text">Ship collision avoidance problem description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ship-domain-modeling-based-on-AIS-and-rules"><span class="nav-text">Ship domain modeling based on AIS and rules</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-and-algorithm"><span class="nav-text">Model and algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markov-Decision-Process"><span class="nav-text">Markov Decision Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D3QN-algorithm"><span class="nav-text">D3QN algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Simulation-Experiment"><span class="nav-text">Simulation Experiment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameter-setting"><span class="nav-text">Parameter setting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collision-avoidance-experiments"><span class="nav-text">Collision avoidance experiments</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
 
                 
 
@@ -710,6 +1223,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
